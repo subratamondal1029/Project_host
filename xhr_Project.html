@@ -135,30 +135,6 @@
   opacity: 1;
   transform: translate(-50%, -130%);
 }
-
-#button {
- padding-left: 33px;
- padding-right: 33px;
- padding-bottom: 16px;
- padding-top: 16px;
- border-radius: 9px;
- background: #2cb5a0;
- border: none;
- font-family: inherit;
- text-align: center;
- cursor: pointer;
- transition: 0.4s;
- color: white;
-}
-
-#button:hover {
- box-shadow: 7px 5px 56px -14px #7cdacc;
-}
-
-#button:active {
- transform: scale(0.97);
- box-shadow: 7px 5px 56px -10px #7cdacc;
-}
     </style>
 </head>
 <body>
@@ -183,8 +159,7 @@
             <span class="tooltip-social">Twitter</span>
         </a>
     </div>
-</div>
-<button id="button"><strong>Get Data</strong></button>
+    </div>
 
 <script>
 const profileData = document.getElementById('Profile-data')
@@ -195,12 +170,7 @@ const userName = prompt("Enter Your GitHub userName")
 const apiUrl = userName ? `https://api.github.com/users/${userName}`: 'https://api.github.com/users/subratamondal1029';
 const xhr = new XMLHttpRequest()
 
-if (!userName) {
-    document.getElementById('button').addEventListener('click', getData)
-}else(
-    getData()
-
-)
+window.onload = getData
 
 function getData(){
 xhr.open('GET', apiUrl)
