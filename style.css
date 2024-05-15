@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0e0f04;
+  color: white;
+  position: relative;
+  height: 100vh;
+  cursor: none;
+}
+
+header {
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #1752c1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.contentContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#verticalLine {
+  border: 1px solid rgb(0, 219, 222);
+  position: relative;
+}
+
+/* horizontalLine styling */
+.horizontalLine {
+  border: 1px solid rgb(133, 255, 189);
+  position: absolute;
+  width: 500px;
+  height: 0;
+}
+
+.horizontalLeft {
+  right: 0;
+}
+
+/* circle styling */
+#verticalLine .circle {
+position: absolute;
+padding: 6px;
+right: -10px;
+top: -7px;
+border-radius: 10pc;
+background-color: rgb(36, 184, 221);
+border: 3px solid #ffffff;
+cursor: pointer;
+}
+
+#verticalLine .horizontalRight .circle {
+    right: 98.4%;
+  top: -9px;
+}
+
+/* left lines */
+.horizontalLine#left1 {
+  top: 60%;
+}
+
+/* Right lines */
+.horizontalLine#right1 {
+  top: 10%;
+}
+
+/* vertical arrow  */
+#verticalLine #verticalArrow {
+  position: absolute;
+  right: -11px;
+  animation: movingDown 3s infinite linear;
+}
+
+#verticalArrow i{
+  font-size: 22px;
+}
+
+/* animation for lines */
+@keyframes movingDown {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* custom-cursor styling */
+#custom-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none; 
+}
+
+#custom-cursor img{
+  width: 100%;
+filter: invert(1);
+transform: rotate(22deg);
+}
