@@ -47,5 +47,11 @@ const projectData = [
         folderName : "Typer",
         projectImage : null
     },
+    {
+        projectName : "Github User Data Fetch",
+        projectDescription : "This is small project to fetch Users Data from github using fetch()",
+        folderName : "API_project/fetch.html",
+        projectImage : "API.png"
+    },
 
 ]
