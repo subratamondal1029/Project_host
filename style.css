@@ -1,6 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::selection {
+  background-color: #1752c1;
+  color: white;
 }
 
 body {
@@ -9,11 +15,13 @@ body {
   position: relative;
   height: 100vh;
   cursor: none;
+  overflow-x: hidden;
 }
 
 header {
   padding: 5px;
   text-align: center;
+  text-transform: capitalize;
   border-radius: 10px;
   background-color: #1752c1;
 }
@@ -21,14 +29,11 @@ header {
 main {
   display: flex;
   justify-content: center;
-  height: 100%;
 }
 
 .contentContainer {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 15px;
 }
 
 #verticalLine {
@@ -40,7 +45,7 @@ main {
 .horizontalLine {
   border: 1px solid rgb(133, 255, 189);
   position: absolute;
-  width: 500px;
+  width: 20vw;
   height: 0;
 }
 
@@ -50,39 +55,36 @@ main {
 
 /* circle styling */
 #verticalLine .circle {
-position: absolute;
-padding: 6px;
-right: -10px;
-top: -7px;
-border-radius: 10pc;
-background-color: rgb(36, 184, 221);
-border: 3px solid #ffffff;
-cursor: pointer;
+  position: absolute;
+  padding: 6px;
+  right: -10px;
+  top: -9px;
+  border-radius: 10pc;
+  background-color: rgb(36, 184, 221);
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  transition: all .5s;
 }
 
 #verticalLine .horizontalRight .circle {
-    right: 98.4%;
+  right: 98.4%;
+  left: -10px;
   top: -9px;
 }
 
-/* left lines */
-.horizontalLine#left1 {
-  top: 60%;
+#verticalLine  .horizontalLine .circle:hover{
+  border-color: rgb(152, 190, 209);
 }
 
-/* Right lines */
-.horizontalLine#right1 {
-  top: 10%;
-}
 
 /* vertical arrow  */
 #verticalLine #verticalArrow {
   position: absolute;
   right: -11px;
-  animation: movingDown 3s infinite linear;
+  animation: movingDown 5s infinite linear;
 }
 
-#verticalArrow i{
+#verticalArrow i {
   font-size: 22px;
 }
 
@@ -102,11 +104,122 @@ cursor: pointer;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  pointer-events: none; 
+  pointer-events: none;
+  z-index: 100;
 }
 
-#custom-cursor img{
+#custom-cursor img {
   width: 100%;
-filter: invert(1);
-transform: rotate(22deg);
+  filter: invert(1);
+  transform: rotate(22deg);
+}
+
+/* content styling */
+.projectContainer {
+  padding: 14px;
+  padding-right: 20px;
+  margin-top: 104px;
+  text-align: center;
+  line-height: 29px;
+  width: 100%;
+  height: 115px;
+}
+
+.projectContainer h1 {
+  padding-bottom: 15px;
+}
+.projectContainer p {
+  margin-right: 32px;
+}
+
+#project1{
+  margin-top: 63px;
+}
+
+.projectImage {
+  width: 384px;
+  height: 245px;
+  margin-left: 17%;
+  margin-top: 127px;
+  position: relative;
+  transform: scale(.9);
+  z-index: 1;
+  transition: all .5s linear;
+}
+
+#project1Img{
+  margin-top: 37px;
+}
+
+#project7Img .tooltip{
+  width: 270px;
+padding-block: 7px;
+}
+
+.projectImage img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+.projectImage:hover{
+  transform: scale(1);
+}
+
+.tooltip {
+  text-transform: capitalize;
+  background-color: #00a36d;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 50px;
+  width: auto;
+  text-align: center;
+}
+
+.tooltip::before {
+  background-color: #00a36d;
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.projectImage:hover .tooltip {
+  top: -18%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* responsive  styling */
+@media screen and (max-width: 970px) {
+  .projectImage {
+    width: 76%;
+    height: 243px;
+  }
+}
+
+@media screen and (max-width:670px) {
+  header{
+    font-size: 10px;
+  }
+
+  .projectContainer h1{
+    font-size: 20px;
+  }
+  .projectContainer p{
+    font-size: 16px;
+  }
 }

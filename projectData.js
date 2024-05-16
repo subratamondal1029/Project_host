@@ -55,3 +55,50 @@ const projectData = [
     },
 
 ]
+
+
+
+const contentLeft = document.getElementById("contentLeft");
+const contentRight = document.getElementById("contentRight");
+const verticalLine = document.getElementById("verticalLine");
+let topVal = 160;
+let turn = "right";
+
+projectData.forEach((projectObject, index) =>{
+
+if (turn === "right") {
+  contentLeft.innerHTML += `<div id="project${index+1}" class="projectContainer">
+            <h1>${projectObject.projectName}</h1>
+            <p>${projectObject.projectDescription}</p>
+        </div>`;
+
+  contentRight.innerHTML += `<div class="projectImage" id="project${index+1}Img">
+            <span class="tooltip">${projectObject.projectName}</span>
+           <a href="/${projectObject.folderName}" target="_blank"><img src="images/${projectObject.projectImage}"></a> 
+        </div>`;
+
+  verticalLine.innerHTML += `<div class="horizontalRight horizontalLine" id="right${index+1}" style="top: ${topVal}px;">
+            <div class="circle"></div>
+        </div>`;
+
+  turn = "left";
+} else {
+  contentLeft.innerHTML += `<div class="projectImage" id="project${index+1}Img">
+            <span class="tooltip">${projectObject.projectName}</span>
+           <a href="/${projectObject.folderName}" target="_blank"><img src="images/${projectObject.projectImage}"></a> 
+        </div>`;
+
+  contentRight.innerHTML += `<div id="project${index+1}" class="projectContainer">
+            <h1>${projectObject.projectName}</h1>
+            <p>${projectObject.projectDescription}</p>
+        </div>`;
+
+  verticalLine.innerHTML += `<div class="horizontalLeft horizontalLine" id="left${index+1}" style="top: ${topVal}px;">
+            <div class="circle"></div>
+        </div>`;
+
+  turn = "right";
+}
+
+topVal += 307
+})
