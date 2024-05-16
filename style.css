@@ -98,6 +98,22 @@ main {
   }
 }
 
+/* line End */
+#lineEnd{
+ position: absolute;
+bottom: -2px;
+left: -67px;
+background-color: green;
+padding: 2px;
+width: 123px;
+height: 33px;
+border-radius: 20px 20px 0 0;
+text-align: center;
+}
+#lineEnd h4{
+  line-height: 43px;
+}
+
 /* custom-cursor styling */
 #custom-cursor {
   position: absolute;

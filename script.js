@@ -14,5 +14,3 @@ if(window.getComputedStyle(document.elementFromPoint(e.clientX, e.clientY)).curs
     customCursor.style.left = left + "px" 
 }
 });
-
-
