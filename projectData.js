@@ -97,22 +97,23 @@ if (turn === "right") {
 topVal += 307
 })
 
-
 // searchBtn fuctionality
+const inputField = document.getElementById('search');
+
 const searchBtn = document.getElementById('searchBtn')
 // console.log(input);
 searchBtn.addEventListener('click', (e) => {
-const inputField = e.target.previousElementSibling;
+
 
     if (inputField.className !== "hideSearch") {
-        inputField.value === "" ? inputField.classList.add('hideSearch') : searchContent(inputField)
+        inputField.value === "" ? inputField.classList.add('hideSearch') : searchContent()
     }else{
         inputField.classList.remove("hideSearch");
     }
 })
 
-function searchContent(input){
-const searchVal = input.value.trim().toLowerCase()
+function searchContent(){
+const searchVal = inputField.value.trim().toLowerCase()
 let isAvilable;
 
 projectData.forEach((data, index) =>{
@@ -128,10 +129,10 @@ if (isAvilable) {
 let projectNum = `project${isAvilable}`
 
     if (projectNum === "project#") {
-     projectNum =  "#"
+     projectNum =  " "
     }
-
-location.href = `${location.href.slice(0, location.href.lastIndexOf("/"))}/#${projectNum}`
+    
+    location.href = `${location.href.slice(0, location.href.lastIndexOf("/"))}/#${projectNum}`
 
     
 }else alert("Can't Find")
@@ -140,6 +141,48 @@ location.href = `${location.href.slice(0, location.href.lastIndexOf("/"))}/#${pr
 
 
 // show suggestion functionality
-// function showSuggetion(){
+const suggestionField = document.getElementById("suggestions");
+const suggestionContainer = document.querySelector("#suggestions ul");
 
-// }
+inputField.addEventListener('keyup', showSuggestion)
+
+function showSuggestion(){
+let arrayOfProjectName = [];
+projectData.forEach((projectObj) => {
+  arrayOfProjectName.push(projectObj.projectName.toLowerCase());
+});
+
+const searchKeyword = inputField.value.trim().toLowerCase();
+if (searchKeyword == "") {
+    suggestionField.style.display = "none"
+}else {
+    const keywordArray = arrayOfProjectName.filter((keyword) => keyword.match(searchKeyword));
+    suggestionContainer.innerHTML = ""
+
+        keywordArray.forEach((keyword) =>{
+            let li = document.createElement('li')
+            li.textContent = keyword
+            suggestionContainer.appendChild(li)
+            suggestionField.style.display = "block"
+        })
+
+}
+
+}
+
+
+suggestionContainer.addEventListener('click', (e) =>{
+    if (e.target.tagName === "LI") {
+       inputField.value = e.target.innerText
+       searchContent()
+       clearAll()
+    }
+
+    
+})
+
+
+function clearAll(){
+    inputField.classList.add('hideSearch')
+    suggestionField.style.display = "none"
+}

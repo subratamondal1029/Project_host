@@ -63,7 +63,7 @@ main {
   background-color: rgb(36, 184, 221);
   border: 3px solid #ffffff;
   cursor: pointer;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 #verticalLine .horizontalRight .circle {
@@ -72,10 +72,9 @@ main {
   top: -9px;
 }
 
-#verticalLine  .horizontalLine .circle:hover{
+#verticalLine .horizontalLine .circle:hover {
   border-color: rgb(152, 190, 209);
 }
-
 
 /* vertical arrow  */
 #verticalLine #verticalArrow {
@@ -99,19 +98,19 @@ main {
 }
 
 /* line End */
-#lineEnd{
- position: absolute;
-bottom: -2px;
-left: -67px;
-background-color: green;
-padding: 2px;
-width: 123px;
-height: 33px;
-border-radius: 20px 20px 0 0;
-text-align: center;
-cursor: not-allowed;
+#lineEnd {
+  position: absolute;
+  bottom: -2px;
+  left: -67px;
+  background-color: green;
+  padding: 2px;
+  width: 123px;
+  height: 33px;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  cursor: not-allowed;
 }
-#lineEnd h4{
+#lineEnd h4 {
   line-height: 43px;
 }
 
@@ -132,7 +131,7 @@ cursor: not-allowed;
 }
 
 /* search field styling */
-#searchContainer{
+#searchContainer {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -144,29 +143,29 @@ cursor: not-allowed;
   width: 260px;
 }
 
-#search{
+#search {
   padding: 6px 17px;
   padding-right: 24px;
   font-size: 17px;
   width: 130px;
   height: 34%;
-  background: transparent;
+  background: black ;
   border: 1px groove #00a36d;
   border-radius: 0 30px;
   outline: none;
   color: white;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
 }
 
-#search::placeholder{
+#search::placeholder {
   font-size: 10px;
 }
 
-#search:focus{
+#search:focus {
   border-color: rebeccapurple;
 }
 
-#searchBtn{
+#searchBtn {
   padding: 6px 10px;
   border: none;
   background-color: rgb(10, 78, 167);
@@ -177,10 +176,42 @@ cursor: not-allowed;
   right: 0;
 }
 
-#search.hideSearch{
+#searchContainer .hideSearch {
   padding: 0;
   width: 0;
   border: none;
+}
+
+/* suggestion styling */
+#suggestions {
+  position: absolute;
+  bottom: 37px;
+  left: 41px;
+  width: 70%;
+  padding: 0 10px;
+  background-color: #198561;
+  border-radius: 10px;
+  display: none;
+}
+
+#suggestions ul{
+  padding-block: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 15px;
+  gap: 14px;
+}
+
+#suggestions ul li{
+  cursor: pointer;
+  list-style: none;
+  border-radius: 10px;
+  padding: 2px 6px;
+}
+
+#suggestions ul li:hover{
+  background-color: #054d35be;
 }
 
 /* content styling */
@@ -201,7 +232,7 @@ cursor: not-allowed;
   margin-inline: 40px;
 }
 
-#project1{
+#project1 {
   margin-top: 63px;
 }
 
@@ -211,18 +242,18 @@ cursor: not-allowed;
   margin-left: 22%;
   margin-top: 127px;
   position: relative;
-  transform: scale(.9);
+  transform: scale(0.9);
   z-index: 1;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
 }
 
-#project1Img{
+#project1Img {
   margin-top: 37px;
 }
 
-#project7Img .tooltip{
+#project7Img .tooltip {
   width: 270px;
-padding-block: 7px;
+  padding-block: 7px;
 }
 
 .projectImage img {
@@ -233,11 +264,11 @@ padding-block: 7px;
   position: relative;
 }
 
-.projectImage:hover{
+.projectImage:hover {
   transform: scale(1);
 }
 
-.projectImage:last-child{
+.projectImage:last-child {
   margin-bottom: 100px;
 }
 
@@ -275,7 +306,6 @@ padding-block: 7px;
   pointer-events: auto;
 }
 
-
 /* responsive  styling */
 @media screen and (max-width: 970px) {
   .projectImage {
@@ -284,15 +314,15 @@ padding-block: 7px;
   }
 }
 
-@media screen and (max-width:670px) {
-  header{
+@media screen and (max-width: 670px) {
+  header {
     font-size: 10px;
   }
 
-  .projectContainer h1{
+  .projectContainer h1 {
     font-size: 20px;
   }
-  .projectContainer p{
+  .projectContainer p {
     font-size: 16px;
   }
 }
