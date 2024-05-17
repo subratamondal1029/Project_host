@@ -48,7 +48,7 @@ const projectData = [
         projectImage : "API.png"
     },
 
-]
+].reverse()
 
 
 
@@ -186,3 +186,6 @@ function clearAll(){
     inputField.classList.add('hideSearch')
     suggestionField.style.display = "none"
 }
+
+
+// sort Functionality
