@@ -42,12 +42,6 @@ const projectData = [
         projectImage : "BG_color_auto.png"
     },
     {
-        projectName : "Typer",
-        projectDescription : "This is Automatic Text Typer That print And Erase Word letter by letter",
-        folderName : "Typer",
-        projectImage : null
-    },
-    {
         projectName : "Github User Data Fetch",
         projectDescription : "This is small project to fetch Users Data from github using fetch()",
         folderName : "API_project/fetch.html",
@@ -102,3 +96,50 @@ if (turn === "right") {
 
 topVal += 307
 })
+
+
+// searchBtn fuctionality
+const searchBtn = document.getElementById('searchBtn')
+// console.log(input);
+searchBtn.addEventListener('click', (e) => {
+const inputField = e.target.previousElementSibling;
+
+    if (inputField.className !== "hideSearch") {
+        inputField.value === "" ? inputField.classList.add('hideSearch') : searchContent(inputField)
+    }else{
+        inputField.classList.remove("hideSearch");
+    }
+})
+
+function searchContent(input){
+const searchVal = input.value.trim().toLowerCase()
+let isAvilable;
+
+projectData.forEach((data, index) =>{
+    if (data.projectName.toLowerCase() === searchVal){
+        if (index == 0) {
+            isAvilable = "#"
+        }else isAvilable = index;
+    }
+})
+
+
+if (isAvilable) {
+let projectNum = `project${isAvilable}`
+
+    if (projectNum === "project#") {
+     projectNum =  "#"
+    }
+
+location.href = `${location.href.slice(0, location.href.lastIndexOf("/"))}/#${projectNum}`
+
+    
+}else alert("Can't Find")
+
+}
+
+
+// show suggestion functionality
+// function showSuggetion(){
+
+// }

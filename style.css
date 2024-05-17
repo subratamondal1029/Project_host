@@ -109,6 +109,7 @@ width: 123px;
 height: 33px;
 border-radius: 20px 20px 0 0;
 text-align: center;
+cursor: not-allowed;
 }
 #lineEnd h4{
   line-height: 43px;
@@ -130,6 +131,58 @@ text-align: center;
   transform: rotate(22deg);
 }
 
+/* search field styling */
+#searchContainer{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 260px;
+}
+
+#search{
+  padding: 6px 17px;
+  padding-right: 24px;
+  font-size: 17px;
+  width: 130px;
+  height: 34%;
+  background: transparent;
+  border: 1px groove #00a36d;
+  border-radius: 0 30px;
+  outline: none;
+  color: white;
+  transition: all .5s linear;
+}
+
+#search::placeholder{
+  font-size: 10px;
+}
+
+#search:focus{
+  border-color: rebeccapurple;
+}
+
+#searchBtn{
+  padding: 6px 10px;
+  border: none;
+  background-color: rgb(10, 78, 167);
+  color: white;
+  border-radius: 0 10pc;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+#search.hideSearch{
+  padding: 0;
+  width: 0;
+  border: none;
+}
+
 /* content styling */
 .projectContainer {
   padding: 14px;
@@ -145,7 +198,7 @@ text-align: center;
   padding-bottom: 15px;
 }
 .projectContainer p {
-  margin-right: 32px;
+  margin-inline: 40px;
 }
 
 #project1{
@@ -155,7 +208,7 @@ text-align: center;
 .projectImage {
   width: 384px;
   height: 245px;
-  margin-left: 17%;
+  margin-left: 22%;
   margin-top: 127px;
   position: relative;
   transform: scale(.9);
@@ -182,6 +235,10 @@ padding-block: 7px;
 
 .projectImage:hover{
   transform: scale(1);
+}
+
+.projectImage:last-child{
+  margin-bottom: 100px;
 }
 
 .tooltip {
