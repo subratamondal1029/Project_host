@@ -68,7 +68,7 @@ if (turn === "right") {
 
   contentRight.innerHTML += `<div class="projectImage" id="project${index+1}Img">
             <span class="tooltip">${projectObject.projectName}</span>
-           <a href="/Project_host/${projectObject.folderName}" target="_blank"><img src="images/${projectObject.projectImage}"></a> 
+           <a href="${projectObject.folderName}" target="_blank"><img src="images/${projectObject.projectImage}"></a> 
         </div>`;
 
   verticalLine.innerHTML += `<div class="horizontalRight horizontalLine" id="right${index+1}" style="top: ${topVal}px;">
@@ -79,7 +79,7 @@ if (turn === "right") {
 } else {
   contentLeft.innerHTML += `<div class="projectImage" id="project${index+1}Img">
             <span class="tooltip">${projectObject.projectName}</span>
-           <a href="/Project_host/${projectObject.folderName}" target="_blank"><img src="images/${projectObject.projectImage}"></a> 
+           <a href="${projectObject.folderName}" target="_blank"><img src="images/${projectObject.projectImage}"></a> 
         </div>`;
 
   contentRight.innerHTML += `<div id="project${index+1}" class="projectContainer">
@@ -161,24 +161,22 @@ if (searchKeyword == "") {
 
         keywordArray.forEach((keyword) =>{
             let li = document.createElement('li')
+            li.setAttribute("tabindex", "0")
             li.textContent = keyword
             suggestionContainer.appendChild(li)
             suggestionField.style.display = "block"
         })
-
 }
 
 }
 
-
+// mouse click select function
 suggestionContainer.addEventListener('click', (e) =>{
     if (e.target.tagName === "LI") {
        inputField.value = e.target.innerText
        searchContent()
        clearAll()
     }
-
-    
 })
 
 
