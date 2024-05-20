@@ -6,7 +6,8 @@ let goalData = JSON.parse(localStorage.getItem('goalData')) ?? []
 inputField.forEach((input) =>{
     input.addEventListener('keyup', (e)=>{
         if(e.key === "Enter" && input.value.trim() !== ""){
-            const goalVal = input.value
+            let goalVal = input.value.trim()
+            goalVal = goalVal.replace(/\W/g, "")
             goalData.push({goalText: goalVal, complete: false})
             localStorage.setItem('goalData', JSON.stringify(goalData))
             printData()
@@ -20,9 +21,10 @@ inputField.forEach((input) =>{
 
 // checking all field are ready for checked 
 const errorText = document.getElementById('error')
+const goalContainer = document.querySelectorAll('.goal').length
 const checkTextFieldLength = setInterval(() => {
     const textField = document.querySelectorAll(".goalText");
-    if (textField.length === 3) {
+    if (textField.length === goalContainer) {
         errorText.textContent = "Go Ahead"
         errorText.style.color = "#858585";
 
@@ -46,7 +48,7 @@ checkBoxs.forEach((checkBox, index) =>{
         }
     })
 })
-
+document.getElementById("totalGoal").textContent = totalGoals
 
 // print function
 if (goalData) printData()

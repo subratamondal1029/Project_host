@@ -18,14 +18,19 @@
                 <div id="progress">
                     <div id="progressText">
                         <span id="progressNum">0</span>
-                        <span>/3 Completed</span>
+                        <span>/<span id="totalGoal"></span> Completed</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="goalContainer">
-            <p id="error">Please set all the 3 goals!</p>
+            <p id="error">Please set all goals!</p>
+
+            <div class="goal">
+                <span class="checkBox"></span>
+                <input type="text" class="goalInput" placeholder="Add new goal...">
+            </div>
 
             <div class="goal">
                 <span class="checkBox"></span>
