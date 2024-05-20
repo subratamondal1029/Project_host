@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: #48a30012;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+  gap: 34px;
+  user-select: none;
+}
+
+body #title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 96px;
+  margin-top: 17px;
+}
+.green {
+  color: #48a300;
+}
+
+#container {
+  width: 653px;
+  border-radius: 15px;
+  background-color: #fbfbfb;
+padding: 17px;
+padding-right: 24px;
+  padding-bottom: 76px;
+margin-bottom: 34px;
+}
+
+#today {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-left: 20px;
+  display: flex;
+  gap: 14px;
+}
+
+#progressContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 13px;
+  margin-left: 22px;
+  margin-bottom: 10px;
+}
+
+#progressPara {
+  font-size: 14px;
+  color: #858585;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+#progressBar {
+  background-color: #48a3001a;
+  border-radius: 15px;
+  height: 30px;
+  width: 96%;
+  margin-top: 20px;
+}
+
+#progress {
+  width: 0;
+  background-color: #48a300;
+  height: 100%;
+  border-radius: 15px;
+  transition: width 0.5s linear;
+}
+
+#goalContainer {
+  padding: 10px 22px;
+}
+
+#error {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ff5151;
+  line-height: 21px;
+}
+
+.goal {
+  border: 1px solid #0000001a;
+  height: 82px;
+  border-radius: 17px;
+  padding: 17px;
+  margin-top: 22px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkBox {
+  border: 2px solid #61481c4d;
+  border-radius: 10pc;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkBox[state="checked"]{
+   background: url(images/tick.png) no-repeat center;
+   border-color: #48A300;
+    cursor: not-allowed;
+
+}
+
+.goalInput::placeholder {
+  color: #d9d9d9;
+}
+
+.goalInput {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  /* display: none; */
+}
+
+.goalText{
+    display: none;
+    font-weight: 500;
+}
+
+.goalText[state="complete"]{
+    color: #48A300;
+    position: relative;
+}
+
+.goalText[state="complete"]::before{
+ position: absolute;   
+  content: '';
+  width: 100%;
+  border-top: 1px solid #48A300;
+  top: 12px;
+}
+
+#footerText{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 56px;
+}

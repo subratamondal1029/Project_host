@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Goal set</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 id="title"> <span class="green">Daily Goal</span> Set</h1>
+
+    <div id="container">
+        <h4 id="today">Today <span id="sun"><img src="images/sun.png" alt="sun"></span></h4>
+        <div id="progressContainer">
+            <div id="progressPara">Raise the bar by completing your goals!</div>
+            <div id="progressBar">
+                <div id="progress"></div>
+            </div>
+        </div>
+
+        <div id="goalContainer">
+            <p id="error">Please set all the 3 goals!</p>
+
+            <div class="goal">
+                <span class="checkBox"></span>
+                <input type="text" class="goalInput" placeholder="Add new goal...">
+                <span class="goalText">Text</span>
+            </div>
+
+            <div class="goal">
+                <span class="checkBox"></span>
+                <input type="text" class="goalInput" placeholder="Add new goal...">
+            </div>
+
+            <div class="goal">
+                <span class="checkBox"></span>
+                <input type="text" class="goalInput" placeholder="Add new goal...">
+            </div>
+
+        </div>
+
+        <div id="footerText">
+            <p>“Move one step ahead, today!”</p>
+        </div>
+    </div>
+</body>
+</html>
