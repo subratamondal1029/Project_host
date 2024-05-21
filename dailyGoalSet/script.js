@@ -7,7 +7,7 @@ inputField.forEach((input) =>{
     input.addEventListener('keyup', (e)=>{
         if(e.key === "Enter" && input.value.trim() !== ""){
             let goalVal = input.value.trim()
-            goalVal = goalVal.replace(/\W/g, "")
+            goalVal = goalVal.replace(/[^\w\s]/g, "");
             goalData.push({goalText: goalVal, complete: false})
             localStorage.setItem('goalData', JSON.stringify(goalData))
             printData()
@@ -21,13 +21,28 @@ inputField.forEach((input) =>{
 
 // checking all field are ready for checked 
 const errorText = document.getElementById('error')
-const goalContainer = document.querySelectorAll('.goal').length
+const totalGoals = document.querySelectorAll('.goal').length;
 const checkTextFieldLength = setInterval(() => {
     const textField = document.querySelectorAll(".goalText");
-    if (textField.length === goalContainer) {
-        errorText.textContent = "Go Ahead"
+    if (textField.length === totalGoals) {
+
+        const errorTextContent = errorText.textContent
+        if (errorTextContent !== "You did it! 🎉" && errorTextContent !== "Just a step away, keep going!"){
+            errorText.textContent = "Go Ahead";
+        }
+
         errorText.style.color = "#858585";
 
+        const today = new Date().getDay()
+        const storedToday = JSON.parse(localStorage.getItem('today'))
+        
+        if (storedToday && today !== storedToday) {
+            deleteAllData()
+            localStorage.setItem('today', JSON.stringify(today))
+        }else{
+            localStorage.setItem("today", JSON.stringify(today))
+        }
+        
         clearInterval(checkTextFieldLength)
     }
 }, 200);
@@ -35,16 +50,13 @@ const checkTextFieldLength = setInterval(() => {
 
 // complete function
 const checkBoxs = document.querySelectorAll(".checkBox");
-const totalGoals = document.querySelectorAll('.goal').length;
 checkBoxs.forEach((checkBox, index) =>{
     checkBox.addEventListener('click', (e) =>{
         const setGoal = document.querySelectorAll(".goalText").length;
         if (totalGoals === setGoal) {
-            // goalData[index].complete = true
             goalData[index].complete = true
             localStorage.setItem('goalData', JSON.stringify(goalData))
             printData()
-            // location.reload()
         }
     })
 })
@@ -55,19 +67,32 @@ if (goalData) printData()
 
 function printData(){
     goalData.forEach((data, index) =>{
+
         const textField = document.createElement('span')
         textField.className = 'goalText'
         textField.textContent = data.goalText
         const goalContainer = inputField[index].parentElement
+
+        const deleteBtn = document.createElement('button')
+        deleteBtn.className = 'deleteBtn'
+        deleteBtn.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        
         
         if(!goalContainer.querySelector('.goalText')){
             goalContainer.appendChild(textField)
+            goalContainer.appendChild(deleteBtn);
         }
         inputField[index].style.display = "none"
 
         if (data.complete) {
             inputField[index].nextElementSibling.setAttribute('state', 'complete')
             checkBoxs[index].setAttribute('state', 'checked')
+
+            const currentDeleteBtn = goalContainer.querySelector('.deleteBtn')
+            if (currentDeleteBtn) {
+                currentDeleteBtn.remove()
+            }
+
             progress()
         }
     })
@@ -95,4 +120,22 @@ function progress() {
     errorText.textContent = "You did it! 🎉"
     document.querySelector('#footerText p').textContent = "“You did it! 🎉 You’ve completed all your goals. Keep up the good work!”"
   }
+}
+
+// delete Data 
+const goalContainer = document.querySelectorAll('.goal').forEach((goal, index) =>{
+    goal.addEventListener('click', (e) =>{
+        if (e.target.tagName === "I") {
+            goalData.splice(index, 1)
+            localStorage.setItem('goalData', JSON.stringify(goalData))
+            location.reload()
+        }
+    })
+})
+
+
+// Delete all Data on Day change
+function deleteAllData(){
+    localStorage.removeItem('goalData')
+    location.reload()
 }

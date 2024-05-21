@@ -6,8 +6,6 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   background-color: #48a30012;
   display: flex;
@@ -24,21 +22,22 @@ body #title {
   text-align: center;
   font-weight: 700;
   font-size: 57px;
-line-height: 79px;
-margin-top: 9px;
+  line-height: 79px;
+  margin-top: 9px;
 }
 .green {
   color: #48a300;
 }
 
 #container {
-  width: 653px;
+  max-width: 653px;
+  width: 100%;
   border-radius: 15px;
   background-color: #fbfbfb;
-padding: 14px;
-padding-right: 19px;
+  padding: 14px;
+  padding-right: 19px;
   padding-bottom: 30px;
-margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 #today {
@@ -83,12 +82,12 @@ margin-bottom: 18px;
   transition: width 0.5s linear;
 }
 
-#progressText{
-  color: #EEFFE0;
+#progressText {
+  color: #eeffe0;
   font-size: 10px;
   text-align: left;
-line-height: 31px;
-padding-left: 26px;
+  line-height: 31px;
+  padding-left: 26px;
 }
 
 #goalContainer {
@@ -112,6 +111,7 @@ padding-left: 26px;
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 
 .checkBox {
@@ -123,11 +123,10 @@ padding-left: 26px;
   cursor: pointer;
 }
 
-.checkBox[state="checked"]{
-   background: url(images/tick.png) no-repeat center;
-   border-color: #48A300;
-    cursor: not-allowed;
-
+.checkBox[state="checked"] {
+  background: url(images/tick.png) no-repeat center;
+  border-color: #48a300;
+  cursor: not-allowed;
 }
 
 .goalInput::placeholder {
@@ -143,28 +142,42 @@ padding-left: 26px;
   /* display: none; */
 }
 
-.goalText{
+.goalText {
   color: #929b1d;
-    font-weight: 500;
+  font-weight: 500;
 }
 
-.goalText[state="complete"]{
-    color: #48A300;
-    position: relative;
+.goalText[state="complete"] {
+  color: #48a300;
+  position: relative;
+  text-decoration: line-through;
 }
 
-.goalText[state="complete"]::before{
- position: absolute;   
-  content: '';
-  width: 100%;
-  border-top: 1px solid #48A300;
-  top: 12px;
+
+.deleteBtn {
+  position: absolute;
+  right: 24px;
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: color .3s linear;
 }
 
-#footerText{
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: center;
-    margin-top: 37px;
+.deleteBtn:hover{
+  color: #48a300;
+}
+
+#footerText {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 37px;
+}
+
+@media screen and (max-width: 470px) {
+  body #title {
+    font-size: 44px;
+  }
 }
