@@ -1,60 +1,65 @@
 const projectData = [
-    {
-        projectName : "Color Changer",
-        projectDescription : "This is a simple color changer app that changes the background color of the page on click of a button.",
-        folderName : "color_changer",
-        projectImage : "color_changer.png"
-    },
-    {
-        projectName : "BMI Calculator",
-        projectDescription : "This is a BMI calculator that calculate BMI using height and weight",
-        folderName : "BMI_calculator",
-        projectImage : "Bmi_calculator.png"
-    },
-    {
-        projectName : "Digital Clock",
-        projectDescription : "This is a Digital clock That shows the local time",
-        folderName : "Digital_clock",
-        projectImage : "Digital_clock.png"
-    },
-    {
-        projectName : "Guess The Number",
-        projectDescription : "This is a Game to Guess The Random Number",
-        folderName : "GuessTheNumber",
-        projectImage : "GuessTheNumber.png"
-    },
-    {
-        projectName : "Keyboard Track",
-        projectDescription : "This Keyboard Key tracker That shows the key and keyCode",
-        folderName : "keyboard_track",
-        projectImage : "keyboard_track.png"
-    },
-    {
-        projectName : "Scroll Indicator",
-        projectDescription : "This Scroll Indicator That shoes the scrolling progress",
-        folderName : "scroll_indicator",
-        projectImage : "scroll_indicator.png"
-    },
-    {
-        projectName : "Automatic Background Changer",
-        projectDescription : "This is change The Background color every 1 second when start button will click and stop changing Background color",
-        folderName : "BgColor_changer_auto",
-        projectImage : "BG_color_auto.png"
-    },
-    {
-        projectName : "Github User Data Fetch",
-        projectDescription : "This is small project to fetch Users Data from github using fetch()",
-        folderName : "API_project/fetch.html",
-        projectImage : "API.png"
-    },
-    {
-        projectName : "Daily Goal Set",
-        projectDescription : "This is To do list There you can set 3 goal for the Day",
-        folderName : "dailyGoalSet",
-        projectImage : "dailyGoalset.png"
-    },
-
-].reverse()
+  {
+    projectName: "BMI Calculator",
+    projectDescription:
+      "This is a BMI calculator that calculate BMI using height and weight",
+    folderName: "BMI_calculator",
+    projectImage: "Bmi_calculator.png",
+  },
+  {
+    projectName: "Digital Clock",
+    projectDescription: "This is a Digital clock That shows the local time",
+    folderName: "Digital_clock",
+    projectImage: "Digital_clock.png",
+  },
+  {
+    projectName: "Alarm Clock",
+    projectDescription: "This is a Alarm clock There we can set Alarm",
+    folderName: "Alarm_Clock",
+    projectImage: "AlarmClock.png",
+  },
+  {
+    projectName: "Guess The Number",
+    projectDescription: "This is a Game to Guess The Random Number",
+    folderName: "GuessTheNumber",
+    projectImage: "GuessTheNumber.png",
+  },
+  {
+    projectName: "Scroll Indicator",
+    projectDescription:
+      "This Scroll Indicator That shoes the scrolling progress",
+    folderName: "scroll_indicator",
+    projectImage: "scroll_indicator.png",
+  },
+  {
+    projectName: "Automatic Background Changer",
+    projectDescription:
+      "This is change The Background color every 1 second when start button will click and stop changing Background color",
+    folderName: "BgColor_changer_auto",
+    projectImage: "BG_color_auto.png",
+  },
+  {
+    projectName: "Search By Anthing",
+    projectDescription:
+      "This is a search engine where we can search anything with any provider (e.g: google, bing)",
+    folderName: "Search_Engine",
+    projectImage: "Search_Engine.png",
+  },
+  {
+    projectName: "Github User Data Fetch",
+    projectDescription:
+      "This is small project to fetch Users Data from github using fetch()",
+    folderName: "API_project/fetch.html",
+    projectImage: "API.png",
+  },
+  {
+    projectName: "Daily Goal Set",
+    projectDescription:
+      "This is To do list There you can set 3 goal for the Day",
+    folderName: "dailyGoalSet",
+    projectImage: "dailyGoalset.png",
+  },
+].reverse();
 
 
 

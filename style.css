@@ -259,6 +259,7 @@ main {
   width: 90%;
   height: 90%;
   position: relative;
+  box-shadow: 1px 2px 14px 0px #4e13d9cc;
 }
 
 .projectImage:hover {
@@ -292,7 +293,7 @@ main {
   content: "";
   height: 0.6em;
   width: 0.6em;
-  bottom: -0.2em;
+  bottom: -0.3em;
   left: 50%;
   transform: translate(-50%) rotate(45deg);
 }

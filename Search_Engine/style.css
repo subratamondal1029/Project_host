@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #181717, #210653);
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+nav {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logoImage {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#logo {
+  height: 100%;
+}
+
+#selectEngine {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  padding: 4px 10px;
+  border-radius: 7px;
+}
+
+/* search Box styling */
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#searchBox {
+  margin-top: 20vh;
+  width: 50%;
+}
+
+#searchForm {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#searchForm label {
+  position: absolute;
+  top: 10px;
+  margin-left: 10px;
+}
+
+#searchForm label img {
+  width: 20px;
+  cursor: pointer;
+}
+
+#searchInput {
+  width: 70%;
+  background: transparent;
+  outline: none;
+  border: 1px solid rgb(100, 11, 112);
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  padding: 8px 15px;
+  padding-left: 34px;
+  border-radius: 10px;
+  transition: all 0.6s ease-in;
+}
+
+#searchInput:focus {
+  border: 2px solid rgb(100, 11, 112);
+}
+
+#serachBtn {
+  font-size: 13px;
+  padding: 9px;
+  border-radius: 43px;
+  cursor: pointer;
+  background: linear-gradient(to left, #1e1b1b, #24065c);
+  border: none;
+  color: white;
+}
+
+#serachBtn:hover {
+  background: linear-gradient(to bottom, #1e1b1b, #24065c);
+}
+
+/* shortcut styling */
+
+#shortcutCon {
+  width: 100%;
+  margin-top: 26vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.shortcutBox {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px;
+  width: 150px;
+}
+
+.shortcutBoxAdded .shortcutcontent {
+  width: 236px;
+}
+
+.shortcutcontent {
+  background-color: rgba(0, 0, 0, 0.075);
+  padding: 10px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 16px;
+}
+
+.shortcutcontent:hover {
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+.shortcut {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.shortcut img {
+  width: 70%;
+}
+
+.shortcutBoxAdded .shortcut img {
+  width: 100%;
+  transform: scale(2);
+}
+
+.shortcutName {
+  color: white;
+  text-align: center;
+}
+
+.shortcutMore {
+  cursor: pointer;
+  padding-top: 5px;
+  font-size: 12px;
+  margin-left: 5px;
+  display: none;
+}
+
+.shortcutMore i:hover {
+  transition: all 0.5s;
+  filter: invert(0.5);
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+  margin-left: 42px;
+  display: none;
+}
+
+/* shortcut pop up styling */
+
+#shortcutAdd {
+  position: fixed;
+  top: 40%;
+  padding: 40px 15px;
+  transition: all 0.5s ease;
+  background-color: #11082f;
+  border-radius: 10px;
+  transform: scale(0);
+}
+
+#shortcutForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#shortcutForm label {
+  font-size: 20px;
+  color: white;
+}
+
+#shortcutForm input {
+  text-transform: capitalize;
+  background: transparent;
+  color: rgb(217, 215, 226);
+  font-size: 18px;
+  padding: 4px 6px;
+  border: 1px solid white;
+  outline: none;
+}
+
+#shortcutForm button {
+  padding: 7px;
+  font-size: 18px;
+  cursor: pointer;
+  background: linear-gradient(to top left, #1e1b1b, #24065c);
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+#shortcutForm button:hover {
+  background: linear-gradient(to top left, #24065c, #1e1b1b);
+}
+
+@media screen and (max-width: 450px) {
+  #searchInput {
+    width: 200px;
+  }
+}

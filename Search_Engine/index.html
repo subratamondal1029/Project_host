@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="subrata mondal" />
+    <title>Search By Anything</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          <img id="logoImage" src="Logo/google.webp" alt="Google" />
+        </div>
+        <div class="engine_Select">
+          <select id="selectEngine">
+            <option value="google" selected>Google</option>
+            <option value="Bing">Bing</option>
+            <option value="yahoo">Yahoo</option>
+            <option value="DuckDuckGo">DuckDuckGo</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="searchBox">
+        <form id="searchForm">
+          <label for="searchInput"
+            ><img src="Logo/google.webp" id="labelImage"
+          /></label>
+          <input type="text" id="searchInput" />
+          <button type="submit" id="serachBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <div id="shortcutCon">
+        <div class="shortcutBox">
+          <div class="shortcutcontent">
+            <div class="shortcut">
+              <!-- <i class="fa-solid fa-plus" style="color: #ffffff;"></i> -->
+              <img src="Logo/plus.webp" alt="" />
+            </div>
+            <div class="shortcutName">
+              <h5>Add Shortcut</h5>
+            </div>
+          </div>
+
+          <div class="shortcutMore">
+            <i class="fa-solid fa-trash" style="color: #f6f5f4"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="shortcutAdd">
+        <form id="shortcutForm">
+
+          <div>
+            <label for="shortcutTitle">Title</label>
+            <input type="text" id="shortcutTitle"  placeholder="Example: Google" required/>
+          </div>
+
+          <div>
+            <label for="shortcutUrl">Url</label>
+            <input type="text" id="shortcutUrl" placeholder="Example.com" required/>
+            <div id="error">Enter a valid website url</div>
+          </div>
+          
+            <div>
+                <button type="button" id="shortcutClose">Close</button>
+                <button type="submit" id="shortcutSave">Save</button>
+            </div>
+
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script
+      src="https://kit.fontawesome.com/7de25e0c5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
