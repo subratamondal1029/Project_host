@@ -47,6 +47,12 @@ const projectData = [
         folderName : "API_project/fetch.html",
         projectImage : "API.png"
     },
+    {
+        projectName : "Daily Goal Set",
+        projectDescription : "This is To do list There you can set 3 goal for the Day",
+        folderName : "dailyGoalSet",
+        projectImage : "dailyGoalset.png"
+    },
 
 ].reverse()
 

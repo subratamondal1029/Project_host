@@ -252,10 +252,6 @@ main {
   margin-top: 37px;
 }
 
-#project2Img .tooltip {
-  width: 270px;
-  padding-block: 7px;
-}
 
 .projectImage img {
   border-radius: 10px;
@@ -287,6 +283,7 @@ main {
   border-radius: 50px;
   width: auto;
   text-align: center;
+  font-size: .75em;
 }
 
 .tooltip::before {
@@ -301,7 +298,7 @@ main {
 }
 
 .projectImage:hover .tooltip {
-  top: -18%;
+  top: -15%;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
