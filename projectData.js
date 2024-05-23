@@ -1,24 +1,5 @@
 const projectData = [
   {
-    projectName: "BMI Calculator",
-    projectDescription:
-      "This is a BMI calculator that calculate BMI using height and weight",
-    folderName: "BMI_calculator",
-    projectImage: "Bmi_calculator.png",
-  },
-  {
-    projectName: "Digital Clock",
-    projectDescription: "This is a Digital clock That shows the local time",
-    folderName: "Digital_clock",
-    projectImage: "Digital_clock.png",
-  },
-  {
-    projectName: "Alarm Clock",
-    projectDescription: "This is a Alarm clock There we can set Alarm",
-    folderName: "Alarm_Clock",
-    projectImage: "AlarmClock.png",
-  },
-  {
     projectName: "Guess The Number",
     projectDescription: "This is a Game to Guess The Random Number",
     folderName: "GuessTheNumber",
@@ -32,11 +13,10 @@ const projectData = [
     projectImage: "scroll_indicator.png",
   },
   {
-    projectName: "Automatic Background Changer",
-    projectDescription:
-      "This is change The Background color every 1 second when start button will click and stop changing Background color",
-    folderName: "BgColor_changer_auto",
-    projectImage: "BG_color_auto.png",
+    projectName: "Alarm Clock",
+    projectDescription: "This is a Alarm clock There we can set Alarm",
+    folderName: "Alarm_Clock",
+    projectImage: "AlarmClock.png",
   },
   {
     projectName: "Search By Anthing",
