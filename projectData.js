@@ -39,6 +39,13 @@ const projectData = [
     folderName: "dailyGoalSet",
     projectImage: "dailyGoalset.png",
   },
+  {
+    projectName: "The Shoe Company",
+    projectDescription:
+      "This is a shoe company website that showcase a shoe",
+    folderName: "TheShoeCompany",
+    projectImage: "TheShoeCompany.png",
+  },
 ].reverse();
 
 
