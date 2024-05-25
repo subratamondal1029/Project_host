@@ -112,17 +112,14 @@ nav {
 }
 
 #shoeImage{
-    width: 85vw;
     height: 90vh;
     position: relative;
+    top: 37px;
 }
 
 #shoeImage > img{
     width: 600px;
-    position: absolute;
    inset: 0;
-   margin: auto;
-   top: -47px;  
 }
 
 .workText{
@@ -151,8 +148,8 @@ margin-top: 12px;
 }
 
 #theFront{
-  right: 21px;
-  top: 210px;
+  right: -166px;
+  top: 87px;
 }
 
  #theFront img{
@@ -162,8 +159,8 @@ margin-top: 12px;
 }
 
 #theHeel{
-  top: 55px;
-  left: 2px;
+  top: -32px;
+  left: -177px;
 }
 
 #theHeel img{
@@ -172,8 +169,8 @@ margin-top: 12px;
 }
 
 #traction{
-  bottom: 60px;
-  left: 279px;  
+  bottom: 87px;
+  left: 49px;
 }
 #traction img{
   position: absolute;
@@ -206,9 +203,8 @@ margin-top: 12px;
 }
 
 #aboutText{
-  width: 45%;
   text-align: left;
-  padding-left: 90px;
+  padding-inline: 76px 29px;
 }
 
 #aboutText h3{
@@ -269,9 +265,9 @@ margin-top: 12px;
 /* contact */
 #contact{
   width: 100vw;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
@@ -307,11 +303,16 @@ margin-top: 12px;
 
 #map{
   width: 50%;
-  height: 100%;
 }
 
 
-
+/* footer  */
+footer p{
+  width: 100%;
+  text-align: center;
+  color: #babbb7;
+  padding-bottom: 16px;
+}
 
 
 
@@ -323,4 +324,8 @@ margin-top: 12px;
   .logo .logoText {
     font-size: 13px;
   }
+/* 
+  #hero #heroText{
+    font-size: 55px;
+  } */
 }
