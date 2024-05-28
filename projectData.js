@@ -46,6 +46,13 @@ const projectData = [
     folderName: "TheShoeCompany",
     projectImage: "TheShoeCompany.png",
   },
+  {
+    projectName: "Filter Joblist",
+    projectDescription:
+      "This is a job list website that showcase have listed job, and We can also filter the job by role, level or language | data is printing dynamically from data.json",
+    folderName: "filter_data",
+    projectImage: "jobList.png",
+  },
 ].reverse();
 
 
