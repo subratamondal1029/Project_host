@@ -1,0 +1,47 @@
+[
+  {
+    "img": "images/audioimage/audio1.png",
+    "name": "Music 1",
+    "music": "music1.mp3"
+  }, 
+  {
+      "img": "images/audioimage/stay.png",
+      "name": "Stay",
+      "music": "stay.mp3"
+    },
+    {
+      "img": "images/audioimage/fallingdown.jpg",
+      "name": "Falling Down",
+      "music": "fallingdown.mp3"
+    },
+    {
+      "img": "images/audioimage/faded.png",
+      "name": "Faded",
+      "music": "Faded.mp3"
+    },
+    {
+      "img": "images/audioimage/ratherbe.jpg",
+      "name": "Rather Be",
+      "music": "Rather Be.mp3"
+    },
+    {
+      "img": "images/audioimage/OrkhanZeynalli.jpg",
+      "name": "Iller Sonra",
+      "music": "iller Sonra.mp3"
+    },
+    {
+      "img": "images/audioimage/ceza.jpg",
+      "name": "Neyim Var Ki",
+      "music": "Neyim Var Ki.mp3"
+    },
+    {
+      "img": "images/audioimage/Gazapizm.jpg",
+      "name": "Unutulacak Dunler",
+      "music": "Unutulacak Dunler.mp3"
+    },
+    {
+      "img": "images/audioimage/AID.jpg",
+      "name": "Boyuk Umidler",
+      "music": "Boyuk Umidler.mp3"
+    }
+  ]

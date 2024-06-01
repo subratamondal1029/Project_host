@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="audioCard">
+        <div id="currentSongCon">
+            <span id="currentSong"></span> / <span id="totalSong"></span>
+        </div>
+            <div id="audioImaige">
+                <img src="images/audioimage/audio1.png" alt="audio">
+            </div>
+
+            <div id="audioDetails">
+                <div id="audioTitle">The Music</div>
+                <div id="timeLines">
+                    <div id="currentTime">0:00</div>
+                    <div id="totalDuration">0:00</div>
+                </div>
+                <div id="audioTime">
+                    <div id="progressBar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls">
+                <button class="btn" id="prev">
+                    <img src="images/previous.svg" alt="">
+                </button>
+                <button class="btn" id="play" status="paused">
+                    <img src="images/play.svg" alt="">
+                </button>
+                <button class="btn" id="next">
+                    <img src="images/next.svg" alt="">
+                </button>
+            </div>
+    </div>
+
+    <audio src="audio/music1.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
