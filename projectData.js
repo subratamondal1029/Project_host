@@ -6,13 +6,6 @@ const projectData = [
     projectImage: "GuessTheNumber.png",
   },
   {
-    projectName: "Scroll Indicator",
-    projectDescription:
-      "This Scroll Indicator That shoes the scrolling progress",
-    folderName: "scroll_indicator",
-    projectImage: "scroll_indicator.png",
-  },
-  {
     projectName: "Alarm Clock",
     projectDescription: "This is a Alarm clock There we can set Alarm",
     folderName: "Alarm_Clock",
@@ -31,6 +24,13 @@ const projectData = [
       "This is small project to fetch Users Data from github using fetch()",
     folderName: "API_project/fetch.html",
     projectImage: "API.png",
+  },
+  {
+    projectName: "Music Player",
+    projectDescription:
+      "A Music player with (multiple songs) (next) (previous) (progress bar) (Duration)",
+    folderName: "audioPlayer",
+    projectImage: "audioPlayer.png",
   },
   {
     projectName: "Daily Goal Set",
