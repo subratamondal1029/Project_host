@@ -53,6 +53,13 @@ const projectData = [
     folderName: "filter_data",
     projectImage: "jobList.png",
   },
+  {
+    projectName: "Quiz_App",
+    projectDescription:
+      "A quiz app that saves The Pogress, heighest score, mute/unmute, share result using (html2canvas & web share api)",
+    folderName: "quiz_app",
+    projectImage: "quiz_app.png",
+  },
 ].reverse();
 
 
