@@ -118,13 +118,13 @@ function printQuestions(quesNum){
 
     document.getElementById('currentQuestion').textContent = quesNum+1     //current question number printing
 
-
+    timingCheck()
 isPrinted = true
 }
 
-let checkingPrinting;
+
 function checkingStart(){
-     checkingPrinting = setInterval(() => {
+     const checkingPrinting = setInterval(() => {
         if (isPrinted) {
             clearInterval(checkingPrinting)
             checkAnswer()
@@ -140,19 +140,19 @@ function checkAnswer(){
      ans.addEventListener('click', () =>{
         const clickedAns = ans.querySelector('.ans').textContent
         const answer = data[currentQuestionNum].answer
-        
         if (clickedAns === answer) {
-         showCorrectAns('correct', answer)
+         showCorrectAns('correct')
          ans.classList.add("correct")
         }else {
          ans.classList.add("wrong")
-           showCorrectAns("wrong", answer)
+           showCorrectAns("wrong")
         }
      })
     })
 }
 
-function showCorrectAns(CW, answer) {
+function showCorrectAns(CW) {
+    const answer = data[currentQuestionNum].answer
     if (CW === "wrong") {
         playSound('wrong')
         document.querySelectorAll('.answer').forEach((ans) => {
@@ -171,6 +171,7 @@ function showCorrectAns(CW, answer) {
     data[currentQuestionNum].completed = true
     setlocalData('data', data)
     isAnswered = true
+    clearInterval(timingInterVal)
 }
 
 function playSound(type){
@@ -327,12 +328,39 @@ function getScoreQuote(score) {
         return "Well done! You're on the right track!";
     } else if (score < 90) {
         return "Excellent work! You're almost there!";
-    } else{
+    }else if(score >= 90 && score < 100){
+        return "You’re so close to mastering it! Keep striving for excellence!"
+    }else{
         return "Outstanding! You’ve mastered this!";
     }
 }
 
+let timingInterVal
+function timingCheck(){ 
+    const gameMenu = document.getElementById('gameMenu')
+    gameMenu.className = ""
 
-function timingCheck(){
-    
+    let totalTime = 30
+    let time = totalTime
+
+    const timeContainer = document.getElementById('time')
+    timeContainer.textContent = `00:${time}`
+
+   timingInterVal =  setInterval(() => {
+        timeContainer.textContent = `00:${time-1}`
+        time--
+
+        const timePar = (time/totalTime) * 100
+        if (timePar < 20) {
+            gameMenu.className = "fullWarn"
+        }else if(timePar <= 50){
+            gameMenu.className = "midWarn"
+        }
+
+        if (timePar <= 0) {
+            clearInterval(timingInterVal)
+            showCorrectAns('wrong')
+        }
+
+    }, 1000);
 }
