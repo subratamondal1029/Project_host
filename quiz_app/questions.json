@@ -1,0 +1,177 @@
+[
+  {
+      "question": "Which company developed JavaScript?",
+      "options": ["Microsoft", "Sun Microsystems", "Oracle", "Netscape"],
+      "answer": "Netscape",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which symbol is used for comments in JavaScript?",
+      "options": ["//", "/*", "<!--", "#"],
+      "answer": "//",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "How do you declare a variable in JavaScript?",
+      "options": ["var", "let", "const", "All of the above"],
+      "answer": "All of the above",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which method converts a JSON string into a JavaScript object?",
+      "options": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.toObject()"],
+      "answer": "JSON.parse()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "How can you add a comment in JavaScript?",
+      "options": ["<!-- This is a comment -->", "// This is a comment", "/* This is a comment */", "# This is a comment"],
+      "answer": "// This is a comment",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which of the following is not a reserved word in JavaScript?",
+      "options": ["interface", "throws", "program", "short"],
+      "answer": "program",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "What is the output of: console.log(typeof null);",
+      "options": ["null", "undefined", "object", "string"],
+      "answer": "object",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "What is the correct syntax to create a class in JavaScript?",
+      "options": ["class MyClass {}", "function MyClass {}", "new MyClass {}", "createClass MyClass {}"],
+      "answer": "class MyClass {}",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "How do you create a function in JavaScript?",
+      "options": ["function myFunction() {}", "def myFunction() {}", "func myFunction() {}", "create myFunction() {}"],
+      "answer": "function myFunction() {}",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "What is the correct way to write an array in JavaScript?",
+      "options": ["var colors = (1:'red', 2:'green', 3:'blue')", "var colors = 'red', 'green', 'blue'", "var colors = ['red', 'green', 'blue']", "var colors = {1:'red', 2:'green', 3:'blue'}"],
+      "answer": "var colors = ['red', 'green', 'blue']",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which event occurs when the user clicks on an HTML element?",
+      "options": ["onchange", "onmouseover", "onmouseclick", "onclick"],
+      "answer": "onclick",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "What will the following code return: Boolean(10 > 9)",
+      "options": ["true", "false", "NaN", "undefined"],
+      "answer": "true",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which operator is used to assign a value to a variable?",
+      "options": ["=", "-", "*", "x"],
+      "answer": "=",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+      "options": ["<script name='xxx.js'>", "<script href='xxx.js'>", "<script src='xxx.js'>", "<script file='xxx.js'>"],
+      "answer": "<script src='xxx.js'>",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "How do you write 'Hello World' in an alert box?",
+      "options": ["alertBox('Hello World');", "alert('Hello World');", "msg('Hello World');", "msgBox('Hello World');"],
+      "answer": "alert('Hello World');",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which built-in method sorts the elements of an array?",
+      "options": ["changeOrder(order)", "order()", "sort()", "None of the above"],
+      "answer": "sort()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "How do you find the number with the highest value of x and y?",
+      "options": ["Math.max(x, y)", "Math.ceil(x, y)", "ceil(x, y)", "top(x, y)"],
+      "answer": "Math.max(x, y)",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which of the following function of Number object returns a string value version of the current number?",
+      "options": ["toString()", "toFixed()", "toLocaleString()", "toPrecision()"],
+      "answer": "toString()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which of the following is a valid JavaScript variable name?",
+      "options": ["2names", "_first_and_last_names", "first-name", "None of the above"],
+      "answer": "_first_and_last_names",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which JavaScript method is used to write into an alert box?",
+      "options": ["alert()", "msg()", "prompt()", "warn()"],
+      "answer": "alert()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which method can be used to check if a number is an integer?",
+      "options": ["Number.isInteger()", "Number.isInt()", "Number.isNumber()", "Number.isDigit()"],
+      "answer": "Number.isInteger()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which JavaScript method can be used to find HTML elements by ID?",
+      "options": ["getElementById()", "getElementsByClassName()", "getElementsByTagName()", "querySelector()"],
+      "answer": "getElementById()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "How do you call a function named 'myFunction'?",
+      "options": ["call function myFunction()", "call myFunction()", "myFunction()", "None of the above"],
+      "answer": "myFunction()",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which operator is used to compare two values?",
+      "options": ["=", "==", "===", "!="],
+      "answer": "==",
+      "completed": false,
+      "correctAnswer": false
+  },
+  {
+      "question": "Which JavaScript method can be used to create a new array from an existing array?",
+      "options": ["concat()", "append()", "newArray()", "createArray()"],
+      "answer": "concat()",
+      "completed": false,
+      "correctAnswer": false
+  }
+]

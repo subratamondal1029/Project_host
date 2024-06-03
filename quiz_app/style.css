@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 ::selection {
@@ -41,9 +42,9 @@ html{
 }
 
 /* button styling */
-#container button {
+#container .startBtn {
   display: flex;
-  padding: 11px 33px;
+  padding: 11px 25px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 25px;
@@ -56,23 +57,23 @@ html{
   cursor: pointer;
 }
 
-#container button:focus {
+#container .startBtn:focus {
   outline: none;
 }
 
-#container button:hover {
+#container .startBtn:hover {
   transition: 0.5s;
   box-shadow: 10px 10px 0 #01ab08;
 }
 
-#container button .second {
+#container .startBtn .second {
   transition: 0.5s;
-  margin-right: 0px;
+  margin-right: 31px;
 }
 
-#container button:hover .second {
+#container .startBtn:hover .second {
   transition: 0.5s;
-  margin-right: 45px;
+  margin-right: 40px;
 }
 
 #container .span {
@@ -81,7 +82,6 @@ html{
 
 #container .second {
   width: 20px;
-  margin-left: 30px;
   position: relative;
   top: 12%;
 }
@@ -96,16 +96,16 @@ html{
   transform: translateX(-30%);
 }
 
-#container button:hover .three {
+#container .startBtn:hover .three {
   animation: color_anim 1s infinite 0.2s;
 }
 
-#container button:hover .one {
+#container .startBtn:hover .one {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.6s;
 }
 
-#container button:hover .two {
+#container .startBtn:hover .two {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.4s;
 }
@@ -128,16 +128,6 @@ html{
 
 #highestScore {
   font-size: 24px;
-  font-weight: 600;
-  display: none;
-}
-
-.footertext {
-  color: #858585;
-  font-size: 10px;
-  position: absolute;
-  bottom: 5px;
-  z-index: 1;
 }
 
 /* game Menu design */
@@ -153,7 +143,7 @@ html{
   align-items: flex-end;
 }
 
-#header {
+#gameMenu #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -180,7 +170,6 @@ html{
 #scoreBoard {
   background-color: #fec33d;
   font-size: 30px;
-  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +181,6 @@ html{
 #question {
   background-color: #f5f5f57a;
   font-size: 24px;
-  font-weight: 600;
   border-radius: 13px;
   box-sizing: border-box;
   padding: 11px 26px;
@@ -208,7 +196,6 @@ html{
 #time {
   background-color: #0ac914;
   color: #fff;
-  font-weight: 600;
   font-size: 32px;
   border-radius: 7px;
   margin-top: 15px;
@@ -230,8 +217,10 @@ html{
   box-shadow: 2px 2px 3px 2px #f5f5dca3;
 }
 
-.answer {
+.answer, .answer:disabled {
   width: 100%;
+  background: transparent;
+  color: currentColor;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -254,14 +243,12 @@ html{
 
 .answer .ans {
   font-size: 23px;
-  font-weight: 600;
 }
 
 #nextBtn{
   color: #01AB08;
   font-size: 24px;
-  font-weight: 600;
-  margin-top: 15px;
+  margin-top: 18px;
   cursor: pointer;
 }
 
@@ -301,3 +288,115 @@ html{
   background-color: #c50d009f;
 }
 
+/* result Menu Design */
+#resultMenu{
+width: 100%;
+min-height: 100vh;
+box-sizing: border-box;
+background-color: #F6F4F0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+padding-block: 20px 25px;
+}
+
+#resultHeader{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#resultHeader h1{
+  font-size: 32px;
+}
+
+#resultContainer{
+  width: 70%;
+  box-sizing: border-box;
+  background-color: #FF7A7A;
+  height: 95px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#correctParse{
+  width: 50%;
+  height: 100%;
+  background-color: #35BD3A;
+  border-radius: 10px;
+  transition: all .7s linear;
+}
+
+#resultContainer #scores{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+#correctPar, #wrongPar{position: absolute;}
+#correctPar img, #wrongPar img{width: 100%;}
+.parsentage{position: absolute; font-size: 20px;}
+
+#correctPar{
+  width: 67px;
+  top: 38px;
+  left: -41px;
+}
+
+#correctPar .parsentage{
+  bottom: -24px;
+  left: -12px;
+}
+
+#wrongPar{
+  width: 67px;
+  top: 38px;
+  right: -41px;
+}
+#wrongPar .parsentage{
+  bottom: -24px;
+  right: -28px;
+}
+
+
+#retry{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#retry h2{
+  font-size: 32px;
+}
+
+#retry .startBtn svg{
+  transform: rotate(180deg);
+}
+
+
+#shareCon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+  color: #535353;
+}
+
+#socialIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#socialIcons img{
+  width: 36px;
+  cursor: pointer;
+}
