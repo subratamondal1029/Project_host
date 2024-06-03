@@ -21,6 +21,9 @@ const speakerStatus = getLocalData('speaker')
 if (speakerStatus && speakerStatus === "mute") speakerImg = `<img src="images/speaker_mute.png" alt="speaker_mute">`
 if (!speakerStatus) setlocalData('speaker', 'unmute')
 
+const mainAudio = document.getElementById('mainMusic')
+mainAudio.onloadedmetadata = () => playSound(null)
+
 let currentQuestionNum;
 let isPrinted = false
 let isAnswered = false
@@ -176,9 +179,11 @@ function showCorrectAns(CW) {
 
 function playSound(type){
     const audio = document.getElementById('sound')
-    audio.src = `sound/${type}.mp3`
     if (getLocalData('speaker') && getLocalData('speaker') === 'unmute') {
-        audio.play()
+        if (type) {
+            audio.src = `sound/${type}.mp3`
+            audio.play()
+        }else mainAudio.play()
     }
 }
 
@@ -190,6 +195,7 @@ function mutedSpeaker(){
             e.target.src = `images/speaker_mute.png`
             e.target.alt = `speaker_mute`
             setlocalData('speaker', 'mute')
+            mainAudio.pause()
         }else{
             e.target.src = `images/speaker_unmute.png`
             e.target.alt = `speaker_unmute`
@@ -364,3 +370,5 @@ function timingCheck(){
 
     }, 1000);
 }
+
+//TODO: sharing function
