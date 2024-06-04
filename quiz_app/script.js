@@ -238,8 +238,9 @@ function showResult(){
     const correctParsentage = Math.round((correctAnswers/totalQuestion) * 100)
     const wrongParsentage = Math.round((wrongAnswers/totalQuestion) * 100)
 
-    document.getElementById('container').innerHTML = ` <div id="resultMenu">
-    <div id="resultHeader">
+    document.getElementById('container').innerHTML = `         <div id="resultMenu">
+    <div id="resultCapture">
+      <div id="resultHeader">
         <img src="images/logo.png" alt="logo" class="logo">
         <h1>Result</h1>
     </div>
@@ -257,6 +258,7 @@ function showResult(){
             <img src="images/wrongLine.png" alt="wrongLine">
             <div class="parsentage">${wrongParsentage}%</div>
         </div>
+    </div>
     </div>
 
     <div id="retry">
@@ -279,9 +281,7 @@ function showResult(){
     <div id="shareCon">
         <p>Share your score:</p>
         <div id="socialIcons">
-            <img src="images/LinkedIn.png" alt="LinkedIn">
-            <img src="images/Twitter.png" alt="Twitter">
-            <img src="images/Instagram.png" alt="Instagram">
+            <img src="images/share.svg" alt="share"> 
         </div>
     </div>
 
@@ -305,6 +305,7 @@ function showResult(){
     <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
 </button>
 </div>
+
 </div>
 `
 
@@ -314,7 +315,7 @@ if (!heighestScore || heighestScore < correctAnswers) {
 }
 
 document.querySelector('#retry .startBtn').addEventListener('click', startGame)
-shareResult()
+document.querySelector('#socialIcons img').addEventListener('click', shareScreenshot)
 }
 
 
@@ -395,17 +396,8 @@ function timingCheck(){
 }
 
 
-function shareResult(){
-const shareBtn = document.getElementById('socialIcons')
-shareBtn.addEventListener('click', (e) =>{
-    if(e.target.tagName == "IMG"){
-        shareScreenshot()
-    }
-})
-}
-
 function shareScreenshot() {
-    html2canvas(document.getElementById('resultMenu'))
+    html2canvas(document.getElementById('resultCapture'))
     .then(function(canvas) {
         canvas.toBlob((blob) => {
             const url = URL.createObjectURL(blob);
