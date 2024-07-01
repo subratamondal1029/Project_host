@@ -6,6 +6,12 @@ const projectData = [
     projectImage: "GuessTheNumber.png",
   },
   {
+    projectName: "word Typer",
+    projectDescription: "This is a Typer app to write and delete words atomatically with loop.",
+    folderName: "Typer",
+    projectImage: "typer.png",
+  },
+  {
     projectName: "Alarm Clock",
     projectDescription: "This is a Alarm clock There we can set Alarm",
     folderName: "Alarm_Clock",
